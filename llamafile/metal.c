@@ -54,6 +54,7 @@ extern char **environ;
 __static_yoink("llama.cpp/ggml/src/ggml.c");
 __static_yoink("llama.cpp/ggml/src/ggml-alloc.c");
 __static_yoink("llama.cpp/ggml/src/ggml-backend.cpp");
+__static_yoink("llama.cpp/ggml/src/ggml-backend-meta.cpp");
 __static_yoink("llama.cpp/ggml/src/ggml-quants.c");
 __static_yoink("llama.cpp/ggml/src/ggml-threading.cpp");
 
@@ -63,6 +64,7 @@ __static_yoink("llama.cpp/ggml/include/gguf.h");
 __static_yoink("llama.cpp/ggml/include/ggml-cpu.h");
 __static_yoink("llama.cpp/ggml/include/ggml-alloc.h");
 __static_yoink("llama.cpp/ggml/include/ggml-backend.h");
+__static_yoink("llama.cpp/ggml/include/ggml-cpp.h");
 __static_yoink("llama.cpp/ggml/include/ggml-metal.h");
 __static_yoink("llama.cpp/ggml/src/ggml-impl.h");
 __static_yoink("llama.cpp/ggml/src/ggml-common.h");
@@ -96,6 +98,7 @@ static const struct MetalSource {
     {"/zip/llama.cpp/ggml/include/ggml-cpu.h", "ggml-cpu.h"},
     {"/zip/llama.cpp/ggml/include/ggml-alloc.h", "ggml-alloc.h"},
     {"/zip/llama.cpp/ggml/include/ggml-backend.h", "ggml-backend.h"},
+    {"/zip/llama.cpp/ggml/include/ggml-cpp.h", "ggml-cpp.h"},
     {"/zip/llama.cpp/ggml/include/ggml-metal.h", "ggml-metal.h"},
     {"/zip/llama.cpp/ggml/src/ggml-impl.h", "ggml-impl.h"},
     {"/zip/llama.cpp/ggml/src/ggml-common.h", "ggml-common.h"},
@@ -108,6 +111,7 @@ static const struct MetalSource {
     {"/zip/llama.cpp/ggml/src/ggml.c", "ggml.c"},
     {"/zip/llama.cpp/ggml/src/ggml-alloc.c", "ggml-alloc.c"},
     {"/zip/llama.cpp/ggml/src/ggml-backend.cpp", "ggml-backend.cpp"},
+    {"/zip/llama.cpp/ggml/src/ggml-backend-meta.cpp", "ggml-backend-meta.cpp"},
     {"/zip/llama.cpp/ggml/src/ggml-quants.c", "ggml-quants.c"},
     {"/zip/llama.cpp/ggml/src/ggml-threading.cpp", "ggml-threading.cpp"},
 
@@ -379,6 +383,7 @@ static bool BuildMetal(const char *dso) {
             "ggml-alloc.c",
             "ggml-quants.c",
             "ggml-backend.cpp",
+            "ggml-backend-meta.cpp",
             "ggml-threading.cpp",
             "ggml-metal.cpp",
             "ggml-metal-device.cpp",

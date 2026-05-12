@@ -219,6 +219,7 @@ LLAMAFILE_HIGHLIGHT_KEYWORDS := $(LLAMAFILE_HIGHLIGHT_GPERF_FILES:%.gperf=o/$(MO
 
 # Server objects for llamafile
 LLAMAFILE_SERVER_SUPPORT_OBJS := \
+	o/$(MODE)/llama.cpp/tools/server/server-chat.cpp.o \
 	o/$(MODE)/llama.cpp/tools/server/server-common.cpp.o \
 	o/$(MODE)/llama.cpp/tools/server/server-context.cpp.o \
 	o/$(MODE)/llama.cpp/tools/server/server-http.cpp.o \
@@ -233,6 +234,7 @@ LLAMAFILE_METAL_SOURCES := \
 	o/$(MODE)/llama.cpp/ggml/src/ggml.c.zip.o \
 	o/$(MODE)/llama.cpp/ggml/src/ggml-alloc.c.zip.o \
 	o/$(MODE)/llama.cpp/ggml/src/ggml-backend.cpp.zip.o \
+	o/$(MODE)/llama.cpp/ggml/src/ggml-backend-meta.cpp.zip.o \
 	o/$(MODE)/llama.cpp/ggml/src/ggml-quants.c.zip.o \
 	o/$(MODE)/llama.cpp/ggml/src/ggml-threading.cpp.zip.o \
 	o/$(MODE)/llama.cpp/ggml/include/ggml.h.zip.o \
@@ -240,6 +242,7 @@ LLAMAFILE_METAL_SOURCES := \
 	o/$(MODE)/llama.cpp/ggml/include/ggml-cpu.h.zip.o \
 	o/$(MODE)/llama.cpp/ggml/include/ggml-alloc.h.zip.o \
 	o/$(MODE)/llama.cpp/ggml/include/ggml-backend.h.zip.o \
+	o/$(MODE)/llama.cpp/ggml/include/ggml-cpp.h.zip.o \
 	o/$(MODE)/llama.cpp/ggml/include/ggml-metal.h.zip.o \
 	o/$(MODE)/llama.cpp/ggml/src/ggml-impl.h.zip.o \
 	o/$(MODE)/llama.cpp/ggml/src/ggml-common.h.zip.o \
